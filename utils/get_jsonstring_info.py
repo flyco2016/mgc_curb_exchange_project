@@ -29,9 +29,12 @@ market_price_sell_ad_jsonString = jsonstring_config.get_config_value("jsonString
 # 撤销广告单
 cancel_ad_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", 'cancel_ad_jsonString')
 
-# 获取广告单
+# 获取广告单列表
 get_buy_ad_list_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", 'get_buy_ad_list_jsonString')
 get_sell_ad_list_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", 'get_sell_ad_list_jsonString')
+
+# 获取单个广告单
+get_single_ad_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", 'get_single_ad_jsonString')
 
 # 法币下单
 buy_fiat_order_limited_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", "buy_fiat_order_limited_jsonString")

@@ -9,7 +9,7 @@ import del_ads_in_db
 currency_tuple = ('BYC', 'BTC', 'ETH', 'KBC', 'NZ', 'USDT')
 #payment_dict = {"bankcard": 1, "Alipay": 2, "WeChatPay": 4}
 
-def getBuyAd(user_name='17727820013', password='123456', currency=None):
+def getBuyAdList(user_name='17727820013', password='123456', currency=None):
     """
     获取商家发布的广告求购单列表
     """
@@ -26,7 +26,7 @@ def getBuyAd(user_name='17727820013', password='123456', currency=None):
     except Exception as err:
         print(err)
 
-def getSellAd(user_name='17727820013', password='123456', currency=None):
+def getSellAdList(user_name='17727820013', password='123456', currency=None):
     """
     获取商家发布的广告卖单列表
     """
@@ -65,9 +65,9 @@ if __name__ == "__main__":
     advertising.limitedPriceBuyAd(currency='BTC', price=1, amount=1000, floor=1, ceiling=1000)
     advertising.marketPriceSellAd(currency='BTC', amount=1000, floor=1, ceiling=1000)
 
-    r1 = getBuyAd(user_name='17727820013', password='123456', currency='BTC')
+    r1 = getBuyAdList(user_name='17727820013', password='123456', currency='BTC')
     print(r1)
 
-    r2 = getSellAd(currency='BTC')
+    r2 = getSellAdList(currency='BTC')
     print(r2)
     
