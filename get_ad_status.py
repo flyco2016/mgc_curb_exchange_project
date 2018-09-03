@@ -6,15 +6,16 @@ from utils import get_jsonstring_info
 def getAdStatus(user_name='17727820013', password='123456', ad_ID_NO=None):
     try:
         temp_list = []
-        for each_item in range(20):
+        for each_item in range(5):
             mytoken = login(login_num=user_name, password=password)["data"]["token"]
             jsonString = get_jsonstring_info.get_single_ad_jsonString %(repr(ad_ID_NO), each_item)        
             data = dict(jsonString=jsonString)
             headers = {"token": mytoken}
             r = requests.post(get_url_info.get_ad_list_url, data=data, headers=headers)
+            #print(r.json())
             if (r.json()['msg'] == '操作完成') and (len(r.json()['data']['list']) != 0):
                 temp_list.append(r.json())
-        temp_data = temp_list['data']['list'][0]
+        temp_data = temp_list[0]['data']['list'][0]
         result_dict = dict(currency=temp_data['tradeCode'], 
                            order_status=temp_data['orderStatus'],
                            quantity_completion=temp_data['completionOrderVal'],
@@ -36,8 +37,7 @@ def getAdStatus(user_name='17727820013', password='123456', ad_ID_NO=None):
 
 if __name__ == '__main__':
     r = getAdStatus(ad_ID_NO='fa1535506797251355446')
-    for i, j in r.items():
-        print(i, '=', j)
+    print(r)
 
 
         

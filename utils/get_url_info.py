@@ -36,3 +36,5 @@ place_fiat_order_url = url_config.get_config_value("urlconfig", "curb_exchange_u
 # 法币取消订单
 cancel_order_url = url_config.get_config_value("urlconfig", "curb_exchange_url", 'cancel_order_url')
 
+# 获取法币订单
+get_fiat_order_url = url_config.get_config_value("urlconfig", "curb_exchange_url", 'get_fiat_order_url')
