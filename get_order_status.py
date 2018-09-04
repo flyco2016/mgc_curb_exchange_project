@@ -20,7 +20,7 @@ def getOrderStatus(user_name='17727820013', password='123456', order_ID_NO=None)
     unit_price---单价，人民币
     order_time---下单时间
     appeal_status---该订单的申诉状态，1为未申诉，2为申诉中，3为申诉已判定
-    order_status---
+    order_status---订单状态，1未付款，2已付款，3已收款，4已发货，5已超时，6已取消
     """
     try:
         mytoken = login(login_num=user_name, password=password)["data"]["token"]
@@ -48,7 +48,7 @@ def getOrderStatus(user_name='17727820013', password='123456', order_ID_NO=None)
 
 
 if __name__ == '__main__':
-    r = getOrderStatus(order_ID_NO='1535684597619519103')
+    r = getOrderStatus(order_ID_NO='1535979259612489838')
     print(r)
     print(r['order_time'])
 

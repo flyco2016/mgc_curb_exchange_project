@@ -50,5 +50,8 @@ cancel_order_jsonString = jsonstring_config.get_config_value("jsonStringconfig",
 # 获取单个法币订单
 get_fiat_order_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", "get_fiat_order_jsonString")
 
+# 更新法币订单状态
+update_fiat_order_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", "update_fiat_order_jsonString")
+
 # 获取国际行情
 get_international_quotation_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "international_quotation_jsonString", 'get_international_quotation_jsonString')

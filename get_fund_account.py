@@ -10,7 +10,7 @@ def getFiatFundAccount(user_name='17727820013', password='123456', currency=None
     """
     try:
         fiat_fund_dict = {}
-        mytoken = login(loginNum=user_name, password=password)["data"]["token"]
+        mytoken = login(login_num=user_name, password=password)["data"]["token"]
         jsonString = get_jsonstring_info.get_fiat_fund_account_jsonString %(repr(currency))        
         data = dict(jsonString=jsonString)
         headers = {"token": str(mytoken)}
@@ -29,7 +29,7 @@ def getCoinFundAccount(user_name='17727820013', password='123456', currency=None
     try:
 
         coin_fund_dict = {}
-        mytoken = login(loginNum=user_name, password=password)["data"]["token"]
+        mytoken = login(login_num=user_name, password=password)["data"]["token"]
         jsonString = get_jsonstring_info.get_coin_fund_account_jsonString %(repr(currency))        
         data = dict(jsonString=jsonString)
         headers = {"token": str(mytoken)}
