@@ -41,3 +41,6 @@ get_fiat_order_url = url_config.get_config_value("urlconfig", "curb_exchange_url
 
 # 更新法币订单
 update_fiat_order_url = url_config.get_config_value("urlconfig", "curb_exchange_url", 'update_fiat_order_url')
+
+# 申诉
+appeal_url = url_config.get_config_value("urlconfig", "curb_exchange_url", 'appeal_url')

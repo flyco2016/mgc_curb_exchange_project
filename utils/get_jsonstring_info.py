@@ -53,5 +53,18 @@ get_fiat_order_jsonString = jsonstring_config.get_config_value("jsonStringconfig
 # 更新法币订单状态
 update_fiat_order_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", "update_fiat_order_jsonString")
 
+# 卖方申诉
+seller_appeal_through_bank_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", "seller_appeal_through_bank_jsonString")
+seller_appeal_through_Alipay_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", "seller_appeal_through_Alipay_jsonString")
+seller_appeal_through_Wechat_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", "seller_appeal_through_Wechat_jsonString")
+
+# 买方申诉
+buyer_appeal_through_bank_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", "buyer_appeal_through_bank_jsonString")
+buyer_appeal_through_Alipay_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", "buyer_appeal_through_Alipay_jsonString")
+buyer_appeal_through_Wechat_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", "buyer_appeal_through_Wechat_jsonString")
+
+"""
+行情相关的法币交易jsonstring
+"""
 # 获取国际行情
 get_international_quotation_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "international_quotation_jsonString", 'get_international_quotation_jsonString')

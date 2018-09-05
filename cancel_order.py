@@ -4,12 +4,12 @@ from utils import get_url_info
 from utils import get_jsonstring_info
 
 
-def cancelOrder(user_name='17727820013', password='123456', order_ID_NO=None):
+def cancelOrder(buyer_user_name='17727820013', password='123456', order_ID_NO=None):
     """
     取消订单
     """
     try:
-        mytoken = login(login_num=user_name, password=password)["data"]["token"]
+        mytoken = login(login_num=buyer_user_name, password=password)["data"]["token"]
         jsonString = get_jsonstring_info.cancel_order_jsonString %(repr(order_ID_NO))        
         data = dict(jsonString=jsonString)
         headers = {"token": mytoken}
@@ -22,4 +22,4 @@ def cancelOrder(user_name='17727820013', password='123456', order_ID_NO=None):
         print(err)
 
 if __name__ == "__main__":
-    cancelOrder(user_name='17727820013', order_ID_NO='1535442831587410665')
+    cancelOrder(buyer_user_name='17727820013', order_ID_NO='1535442831587410665')

@@ -21,12 +21,12 @@ def bat_reg_telephone_user(tele_lower_limit, tele_upper_limit):
         "password": "abc123456",
         "code": "989899",
         "regFromCode": "86"
-        }""" % (random.randint(1, 4), str(tele))   # 生成随机注册端还有随机注册号码的值  
+        }""" % (random.randint(1, 4), repr(tele))   # 生成随机注册端还有随机注册号码的值  
         r = requests.post(reg_url, data=dict(jsonString=value_str))
         reg_list.append(r.json())
     return reg_list
 
 if __name__ == '__main__':
-    user_list = bat_reg_telephone_user(15071458520, 15071458530)
+    user_list = bat_reg_telephone_user(15071458530, 15071458540)
     for i in user_list:
         print(i)
