@@ -2,7 +2,7 @@ import requests
 from login import login
 from utils import get_url_info
 from utils import get_jsonstring_info
-import get_international_quotation
+
 
 
 mytoken = login(login_num=user_name, password=password)["data"]["token"]

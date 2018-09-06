@@ -48,7 +48,7 @@ def sellerAppealThroughWechat(seller_user_name=None, password='123456', order_ID
     except Exception as err:
        print(err)
 
-def buyerAppealThroughBank(seller_user_name=None, password='123456', order_ID_NO=None):
+def buyerAppealThroughBank(buyer_user_name=None, password='123456', order_ID_NO=None):
     """
     函数功能：买家通过银行卡信息申诉
     """

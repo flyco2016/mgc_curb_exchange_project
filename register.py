@@ -1,32 +1,179 @@
 import requests
-import json
-import random
+from utils import get_url_info
+from utils import get_jsonstring_info
+import send_authcode
 
+def registerByPhoneThroughPC(phone=None, password=None):
+    """
+    函数功能：通过手机号PC注册
+    """
+    try:
+        jsonString = get_jsonstring_info.register_through_PC_jsonString %(repr(phone), repr(password))        
+        data = dict(jsonString=jsonString)
+        send_authcode.sendPhoneAuthcode(phone=phone, device=1)
+        r = requests.post(get_url_info.register_url, data=data)
+        if r.json()['code'] == 1:
+            print("手机注册成功," + r.json()['msg'])
+        else:
+            print(r.json()['msg'])
+    except Exception as err:
+        print(err)
 
-def bat_reg_telephone_user(tele_lower_limit, tele_upper_limit):
+def registerByPhoneThroughIOS(phone=None, password=None):
     """
-    author:tengfei Ma
-    purpose:注册n个账户,两个参数为上限和下限
-    input_type:int
-    return_type:list
+    函数功能：通过手机号IOS注册
     """
-    base_url = 'http://192.168.13.221:8021/api/'
-    reg_url = base_url + 'user/userRegister'
-    reg_list = []
-    
-    for tele in range(tele_lower_limit, tele_upper_limit):
-        value_str = """{
-        "device": %d,
-        "loginNum": %s,
-        "password": "abc123456",
-        "code": "989899",
-        "regFromCode": "86"
-        }""" % (random.randint(1, 4), repr(tele))   # 生成随机注册端还有随机注册号码的值  
-        r = requests.post(reg_url, data=dict(jsonString=value_str))
-        reg_list.append(r.json())
-    return reg_list
+    try:
+        jsonString = get_jsonstring_info.register_through_IOS_jsonString %(repr(phone), repr(password))        
+        data = dict(jsonString=jsonString)
+        send_authcode.sendPhoneAuthcode(phone=phone, device=3)
+        r = requests.post(get_url_info.register_url, data=data)
+        if r.json()['code'] == 1:
+            print("手机注册成功," + r.json()['msg'])
+        else:
+            print(r.json()['msg'])
+    except Exception as err:
+        print(err)
+
+def registerByPhoneThroughAndroid(phone=None, password=None):
+    """
+    函数功能：通过手机号安卓注册
+    """
+    try:
+        jsonString = get_jsonstring_info.register_through_Android_jsonString %(repr(phone), repr(password))        
+        data = dict(jsonString=jsonString)
+        send_authcode.sendPhoneAuthcode(phone=phone, device=2)
+        r = requests.post(get_url_info.register_url, data=data)
+        if r.json()['code'] == 1:
+            print("手机注册成功," + r.json()['msg'])
+        else:
+            print(r.json()['msg'])
+    except Exception as err:
+        print(err)
+
+def registerByPhoneThroughH5WithInviterCode(phone=None, password=None, inviter_code=None):
+    """
+    函数功能：通过手机号H5注册(带邀请码)
+    """
+    try:
+        jsonString = get_jsonstring_info.register_through_H5_with_inviterCode_jsonString %(repr(phone), repr(password))        
+        data = dict(jsonString=jsonString)
+        send_authcode.sendPhoneAuthcode(phone=phone, device=4)
+        r = requests.post(get_url_info.register_url, data=data)
+        if r.json()['code'] == 1:
+            print("手机注册成功," + r.json()['msg'])
+        else:
+            print(r.json()['msg'])
+    except Exception as err:
+        print(err)
+
+def registerByPhoneThroughH5WithoutInviterCode(phone=None, password=None, inviter_code=None):
+    """
+    函数功能：通过手机号H5注册(不带邀请码)
+    """
+    try:
+        jsonString = get_jsonstring_info.register_through_H5_without_inviterCode_jsonString %(repr(phone), repr(password))        
+        data = dict(jsonString=jsonString)
+        send_authcode.sendPhoneAuthcode(phone=phone, device=4)
+        r = requests.post(get_url_info.register_url, data=data)
+        if r.json()['code'] == 1:
+            print("手机注册成功," + r.json()['msg'])
+        else:
+            print(r.json()['msg'])
+    except Exception as err:
+        print(err)
+
+def registerByEmailThroughPC(email=None, password=None):
+    """
+    函数功能：通过邮箱PC注册
+    """
+    try:
+        jsonString = get_jsonstring_info.register_through_PC_jsonString %(repr(email), repr(password))        
+        data = dict(jsonString=jsonString)
+        send_authcode.sendEmailAuthcode(email=email, device=1)
+        r = requests.post(get_url_info.register_url, data=data)
+        if r.json()['code'] == 1:
+            print("邮箱注册成功," + r.json()['msg'])
+        else:
+            print(r.json()['msg'])
+    except Exception as err:
+        print(err)
+
+def registerByEmailThroughIOS(email=None, password=None):
+    """
+    函数功能：通过邮箱IOS注册
+    """
+    try:
+        jsonString = get_jsonstring_info.register_through_IOS_jsonString %(repr(email), repr(password))        
+        data = dict(jsonString=jsonString)
+        send_authcode.sendEmailAuthcode(email=email, device=3)
+        r = requests.post(get_url_info.register_url, data=data)
+        if r.json()['code'] == 1:
+            print("邮箱注册成功," + r.json()['msg'])
+        else:
+            print(r.json()['msg'])
+    except Exception as err:
+        print(err)
+
+def registerByEmailThroughAndroid(email=None, password=None):
+    """
+    函数功能：通过手机号安卓注册
+    """
+    try:
+        jsonString = get_jsonstring_info.register_through_Android_jsonString %(repr(email), repr(password))        
+        data = dict(jsonString=jsonString)
+        send_authcode.sendEmailAuthcode(email=email, device=2)
+        r = requests.post(get_url_info.register_url, data=data)
+        if r.json()['code'] == 1:
+            print("邮箱注册成功," + r.json()['msg'])
+        else:
+            print(r.json()['msg'])
+    except Exception as err:
+        print(err)
+
+def registerByEmailThroughH5WithInviterCode(email=None, password=None, inviter_code=None):
+    """
+    函数功能：通过邮箱H5注册(带邀请码)
+    """
+    try:
+        jsonString = get_jsonstring_info.register_through_H5_with_inviterCode_jsonString %(repr(email), repr(password))        
+        data = dict(jsonString=jsonString)
+        send_authcode.sendEmailAuthcode(email=email, device=4)
+        r = requests.post(get_url_info.register_url, data=data)
+        if r.json()['code'] == 1:
+            print("邮箱注册成功," + r.json()['msg'])
+        else:
+            print(r.json()['msg'])
+    except Exception as err:
+        print(err)
+
+def registerByEmailThroughH5WithoutInviterCode(email=None, password=None, inviter_code=None):
+    """
+    函数功能：通过邮箱H5注册(不带邀请码)
+    """
+    try:
+        jsonString = get_jsonstring_info.register_through_H5_without_inviterCode_jsonString %(repr(email), repr(password))        
+        data = dict(jsonString=jsonString)
+        send_authcode.sendEmailAuthcode(email=email, device=4)
+        r = requests.post(get_url_info.register_url, data=data)
+        if r.json()['code'] == 1:
+            print("邮箱注册成功," + r.json()['msg'])
+        else:
+            print(r.json()['msg'])
+    except Exception as err:
+        print(err)
 
 if __name__ == '__main__':
-    user_list = bat_reg_telephone_user(15071458530, 15071458540)
-    for i in user_list:
-        print(i)
+    import random
+    import string
+    """
+    检验在某个手机段范围内的注册，密码使用随机8位密码
+    """
+    """
+    for i in range(17727820078, 17727820080):
+        registerByPhoneThroughPC(phone=str(i), password=''.join(random.sample(string.ascii_lowercase + string.ascii_uppercase + string.digits, 8)))
+    """
+    registerByPhoneThroughIOS(phone='17727820089', password='abc123456')
+    registerByPhoneThroughAndroid(phone='17727820090', password='abc123456')
+    
+
