@@ -175,5 +175,6 @@ if __name__ == '__main__':
     """
     registerByPhoneThroughIOS(phone='17727820089', password='abc123456')
     registerByPhoneThroughAndroid(phone='17727820090', password='abc123456')
+    registerByPhoneThroughAndroid(phone='17727820090', password='abc123456')
     
 
