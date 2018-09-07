@@ -19,7 +19,7 @@ register_through_IOS_jsonString = jsonstring_config.get_config_value("jsonString
 register_through_H5_with_inviterCode_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "user_center_jsonString", 'register_through_H5_with_inviterCode_jsonString')
 # 通过H5注册账号（不带邀请码）
 register_through_H5_without_inviterCode_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "user_center_jsonString", 'register_through_H5_without_inviterCode_jsonString')
-# 登陆
+# 登录
 login_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "user_center_jsonString", 'login_jsonString')
 # 修改密码
 modifypwd_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "user_center_jsonString", 'modifypwd_jsonString')
