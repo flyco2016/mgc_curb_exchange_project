@@ -34,7 +34,7 @@ def initUserFundAccount(fund_type='UserFiatFunds', user_nickname='手机商家',
                 db.update_data_in_db(update_sql)
             elif (frozen_balance == None):
                 update_sql = """UPDATE {3} 
-                                SET frozenBalance = {0} 
+                                SET availableBalance = {0} 
                                 WHERE userId = {1} 
                                 AND tradeCode = {2};""".format(available_balance, repr(user_id), repr(currency), fund_type)
                 db.update_data_in_db(update_sql)

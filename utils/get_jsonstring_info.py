@@ -27,6 +27,12 @@ modifypwd_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "u
 identity_IDcard_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "user_center_jsonString", 'identity_IDcard_jsonString')
 # 通过护照认证
 identity_passport_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "user_center_jsonString", 'identity_passport_jsonString')
+# PC端设置资金密码
+set_money_password_in_PC_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "user_center_jsonString", 'set_money_password_in_PC_jsonString')
+# 安卓端设置资金密码
+set_money_password_in_Android_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "user_center_jsonString", 'set_money_password_in_Android_jsonString')
+# IOS端设置资金密码
+set_money_password_in_IOS_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "user_center_jsonString", 'set_money_password_in_IOS_jsonString')
 
 """
 获取资金账户
@@ -39,6 +45,12 @@ get_coin_fund_account_jsonString = jsonstring_config.get_config_value("jsonStrin
 """
 法币交易jsonstring
 """
+# PC端申请商家
+apply_for_merchant_in_PC_jsongString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", 'apply_for_merchant_in_PC_jsongString')
+# 安卓端申请商家
+apply_for_merchant_in_Android_jsongString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", 'apply_for_merchant_in_Android_jsongString')
+# IOS端申请商家
+apply_for_merchant_in_IOS_jsongString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", 'apply_for_merchant_in_IOS_jsongString')
 # 发布限价求购广告
 limited_price_buy_ad_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "curb_exchange_jsonString", 'limited_price_buy_ad_jsonString')
 # 发布市价求购广告

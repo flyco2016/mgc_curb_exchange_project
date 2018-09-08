@@ -14,7 +14,7 @@ payment=7, price=None, amount=None, floor=None, ceiling=None):
     发布限价买入广告
     """
     try:
-        mytoken = login(loginNum=user_name, password=password)["data"]["token"]
+        mytoken = login(login_num=user_name, password=password)["data"]["token"]
         jsonString = get_jsonstring_info.limited_price_buy_ad_jsonString %(repr(currency), payment, price, 
         amount, floor, ceiling)        
         data = dict(jsonString=jsonString)
@@ -34,7 +34,7 @@ payment=7, amount=None, floor=None, ceiling=None):
     """
     try:
         quotation = get_international_quotation.getInternationalQuotation(currency)
-        mytoken = login(loginNum=user_name, password=password)["data"]["token"]
+        mytoken = login(login_num=user_name, password=password)["data"]["token"]
         jsonString = get_jsonstring_info.market_price_buy_ad_jsonString %(repr(currency), payment, 
         amount, floor/quotation, ceiling/quotation)        
         data = dict(jsonString=jsonString)
@@ -53,7 +53,7 @@ payment=7, price=None, amount=None, floor=None, ceiling=None):
     发布限价卖出广告
     """
     try:
-        mytoken = login(loginNum=user_name, password=password)["data"]["token"]
+        mytoken = login(login_num=user_name, password=password)["data"]["token"]
         jsonString = get_jsonstring_info.limited_price_sell_ad_jsonString %(repr(currency), payment, price, 
         amount, floor, ceiling)        
         data = dict(jsonString=jsonString)
@@ -75,7 +75,7 @@ payment=7, amount=None, floor=None, ceiling=None):
     """
     try:
         quotation = get_international_quotation.getInternationalQuotation(currency)
-        mytoken = login(loginNum=user_name, password=password)["data"]["token"]
+        mytoken = login(login_num=user_name, password=password)["data"]["token"]
         jsonString = get_jsonstring_info.market_price_sell_ad_jsonString %(repr(currency), payment, 
         amount, floor/quotation, ceiling/quotation)        
         data = dict(jsonString=jsonString)
