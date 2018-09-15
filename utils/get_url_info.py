@@ -52,3 +52,15 @@ get_fiat_order_url = url_config.get_config_value("urlconfig", "curb_exchange_url
 update_fiat_order_url = url_config.get_config_value("urlconfig", "curb_exchange_url", 'update_fiat_order_url')
 # 申诉
 appeal_url = url_config.get_config_value("urlconfig", "curb_exchange_url", 'appeal_url')
+
+"""
+币币交易
+"""
+# 获取盘面行情
+get_surface_quotation_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'get_surface_quotation_url')
+# 委托下单
+add_entrustment_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'add_entrustment_url')
+# 获取当前委托
+get_current_entrustments_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'get_current_entrustments_url')
+# 获取历史委托
+get_history_entrustments_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'get_history_entrustments_url')

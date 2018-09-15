@@ -103,3 +103,27 @@ buyer_appeal_through_Wechat_jsonString = jsonstring_config.get_config_value("jso
 """
 # 获取国际行情
 get_international_quotation_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "international_quotation_jsonString", 'get_international_quotation_jsonString')
+
+"""
+币币交易
+"""
+# 委托下单---限价买入
+add_buy_entrustment_limited_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'add_buy_entrustment_limited_jsonString')
+# 委托下单---限价卖出
+add_sell_entrustment_limited_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'add_sell_entrustment_limited_jsonString')
+# 委托下单---市价买入
+add_buy_entrustment_market_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'add_buy_entrustment_market_jsonString')
+# 委托下单---市价卖出
+add_sell_entrustment_market_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'add_sell_entrustment_market_jsonString')
+# PC上获取当前委托
+get_current_entrustments_in_PC_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_current_entrustments_in_PC_jsonString')
+# 安卓上获取当前委托
+get_current_entrustments_in_Android_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_current_entrustments_in_Android_jsonString')
+# IOS上获取当前委托
+get_current_entrustments_in_IOS_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_current_current_entrustments_in_IOS_jsonString')
+# PC上获取历史委托
+get_history_entrustments_in_PC_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_history_entrustments_in_PC_jsonString')
+# 安卓上获取历史委托
+get_history_entrustments_in_Android_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_history_entrustments_in_Android_jsonString')
+# IOS上获取历史委托
+get_history_entrustments_in_IOS_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_history_entrustments_in_IOS_jsonString')
