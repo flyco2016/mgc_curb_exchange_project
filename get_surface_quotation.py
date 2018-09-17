@@ -1,7 +1,6 @@
 import requests
 import json
 from utils import get_url_info
-from utils import get_jsonstring_info
 
 
 def getSurfaceQuotation(symbol='BTC', market='NZ'):
@@ -58,11 +57,14 @@ def getSurfaceQuotation(symbol='BTC', market='NZ'):
         print(r.json()['msg'])
 
 if __name__ == '__main__':
+    """
     symbol_list = ['ETH', 'EOS', 'LTC', 'USDT', 'BTC', 'OWN', 'KBC', 'HED', 'LTW']
     for symbol in symbol_list:
         r = getSurfaceQuotation(symbol=symbol, market='NZ')
         for k, v in r.items():
             print(k, '==>', v)
         print('\n')
+    """
+    print(getSurfaceQuotation(symbol='BTC', market='NZ'))
 
     

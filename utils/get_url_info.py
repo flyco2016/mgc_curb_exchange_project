@@ -64,3 +64,15 @@ add_entrustment_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchan
 get_current_entrustments_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'get_current_entrustments_url')
 # 获取历史委托
 get_history_entrustments_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'get_history_entrustments_url')
+# 获取最新的成交记录
+get_c2c_deal_record_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'get_c2c_deal_record_url')
+# 添加自选
+add_collection_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'add_collection_url')
+# 删除自选
+del_collection_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'del_collection_url')
+# 获取自选
+get_collection_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'get_collection_url')
+# 获取币种的最小交易量
+get_minimum_transaction_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'get_minimum_transaction_url')
+# 获取买卖五档
+get_buy_and_sell_five_gears_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'get_buy_and_sell_five_gears_url')

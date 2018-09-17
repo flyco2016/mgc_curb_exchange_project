@@ -43,5 +43,5 @@ market='NZ'):
 
 if __name__ == "__main__":
     getMyCurrentEntrustmentsInPC()
-    #getMyCurrentEntrustmentsInIOS()
-    #getMyCurrentEntrustmentsInAndroid()
+    getMyCurrentEntrustmentsInIOS()
+    getMyCurrentEntrustmentsInAndroid()

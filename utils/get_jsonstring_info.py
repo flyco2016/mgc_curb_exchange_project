@@ -120,10 +120,23 @@ get_current_entrustments_in_PC_jsonString = jsonstring_config.get_config_value("
 # 安卓上获取当前委托
 get_current_entrustments_in_Android_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_current_entrustments_in_Android_jsonString')
 # IOS上获取当前委托
-get_current_entrustments_in_IOS_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_current_current_entrustments_in_IOS_jsonString')
+get_current_entrustments_in_IOS_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_current_entrustments_in_IOS_jsonString')
 # PC上获取历史委托
 get_history_entrustments_in_PC_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_history_entrustments_in_PC_jsonString')
 # 安卓上获取历史委托
 get_history_entrustments_in_Android_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_history_entrustments_in_Android_jsonString')
 # IOS上获取历史委托
 get_history_entrustments_in_IOS_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_history_entrustments_in_IOS_jsonString')
+# 获取最新成交记录
+get_c2c_deal_record_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_c2c_deal_record_jsonString')
+# 增加自选交易对
+add_collection_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'add_collection_jsonString')
+# 删除自选交易对
+del_collection_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'del_collection_jsonString')
+# 在PC上获取自选交易对
+get_collection_in_PC_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_collection_in_PC_jsonString')
+# 在安卓上获取自选交易对
+get_collection_in_Android_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_collection_in_Android_jsonString')
+# 在IOS上获取自选交易对
+get_collection_in_IOS_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_collection_in_IOS_jsonString')
+
