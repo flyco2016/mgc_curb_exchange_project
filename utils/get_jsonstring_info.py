@@ -139,4 +139,5 @@ get_collection_in_PC_jsonString = jsonstring_config.get_config_value("jsonString
 get_collection_in_Android_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_collection_in_Android_jsonString')
 # 在IOS上获取自选交易对
 get_collection_in_IOS_jsonString = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'get_collection_in_IOS_jsonString')
-
+# 撤销委托单
+cancel_entrustment_jsonSring = jsonstring_config.get_config_value("jsonStringconfig", "Coin2Coin_exchange_jsonString", 'cancel_entrustment_jsonSring')

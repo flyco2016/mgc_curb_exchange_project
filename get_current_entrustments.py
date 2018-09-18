@@ -14,7 +14,10 @@ market='NZ'):
     data = dict(jsonString=jsonString)
     headers = {"token": mytoken}
     r = requests.post(get_url_info.get_current_entrustments_url, data=data, headers=headers)
-    print(r.json())
+    if (r.json()['msg']=='操作完成') and (len(r.json()['data'])>0):
+        return r.json()['data']
+    else:
+        print(r.json())
 
 def getMyCurrentEntrustmentsInAndroid(user_name='17727820013', password='123456', symbol='BTC', 
 market='NZ'):
@@ -26,7 +29,10 @@ market='NZ'):
     data = dict(jsonString=jsonString)
     headers = {"token": mytoken}
     r = requests.post(get_url_info.get_current_entrustments_url, data=data, headers=headers)
-    print(r.json())
+    if (r.json()['msg']=='操作完成') and (len(r.json()['data'])>0):
+        return r.json()['data']
+    else:
+        print(r.json())
 
 def getMyCurrentEntrustmentsInIOS(user_name='17727820013', password='123456', symbol='BTC', 
 market='NZ'):
@@ -38,10 +44,19 @@ market='NZ'):
     data = dict(jsonString=jsonString)
     headers = {"token": mytoken}
     r = requests.post(get_url_info.get_current_entrustments_url, data=data, headers=headers)
-    print(r.json())
+    if (r.json()['msg']=='操作完成') and (len(r.json()['data'])>0):
+        return r.json()['data']
+    else:
+        print(r.json())
 
 
 if __name__ == "__main__":
-    getMyCurrentEntrustmentsInPC()
-    getMyCurrentEntrustmentsInIOS()
-    getMyCurrentEntrustmentsInAndroid()
+    r = getMyCurrentEntrustmentsInPC()
+    for i in r:
+        print(i['id'])
+    r = [i['id'] for i in getMyCurrentEntrustmentsInAndroid()]
+    print(r)
+    print(len(r))
+    #print(len(r))
+    #getMyCurrentEntrustmentsInIOS()
+    #getMyCurrentEntrustmentsInAndroid()

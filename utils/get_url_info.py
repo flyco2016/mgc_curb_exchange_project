@@ -76,3 +76,7 @@ get_collection_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchang
 get_minimum_transaction_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'get_minimum_transaction_url')
 # 获取买卖五档
 get_buy_and_sell_five_gears_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'get_buy_and_sell_five_gears_url')
+# 更新委托单状态
+update_entrustment_status_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'update_entrustment_status_url')
+# 获取K线图数据
+get_kline_data_url = url_config.get_config_value("urlconfig", "Coin2Coin_exchange_url", 'get_kline_data_url')
