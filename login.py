@@ -76,4 +76,4 @@ if __name__ == "__main__":
         print(r)
     """
     for i in [loginByAndroid, loginByIOS, loginByPC]:
-        print(i())
+        print(i(login_num='17727820013', password='123456'))
