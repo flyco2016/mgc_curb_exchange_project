@@ -32,35 +32,38 @@ if __name__ == "__main__":
     import threading
 
     start= time.time()
-    sell_list = [1.2850, 1.4863, 1.6223, 1.1687, 1.5354]
-    buy_list = [0.8994, 0.6868, 0.7470, 0.3450, 0.9253]
-    """
+    sell_list = [15.0881, 15.0882, 15.0883, 15.0884, 15.0885]
+    buy_list = [10.0881, 10.0882, 10.0883, 10.0884, 10.0885]
+    
     print('常规版下单开始......')
-    for i in range(50):
+    for i in range(100):
         # 发布委托单
         #sell_list = [29644.2850, 29051.4863, 29009.6223, 28648.1687, 28605.5354]
         #buy_list = [27917.8994, 27762.6868, 27574.7470, 27189.3450, 27095.9253]
         for price in sell_list:
-            add_entrustment.addSellEntrustmentLimited(symbol='ETH', market='BTC', price=price, volume=10.88888888)
-            #time.sleep(0.1)
+            add_entrustment.addSellEntrustmentLimited(symbol='BTC', market='NZ', price=price, volume=1.8888888)
+            time.sleep(0.5)
 
         for price in buy_list:
-            add_entrustment.addBuyEntrustmentLimited(symbol='ETH', market='BTC', price=price, volume=10.88888888)
-            #time.sleep(0.1)
-    """
-    """
+            add_entrustment.addBuyEntrustmentLimited(symbol='BTC', market='NZ', price=price, volume=1.8888888)
+            time.sleep(0.5)
+    
+    
     print('伪多线程版下单开始......')
     for i in range(50):
         
         for price in sell_list:
-            sell_thread = threading.Thread(target=add_entrustment.addSellEntrustmentLimited, kwargs={"symbol":'MGXT', "market":'ETH', "price":price, "volume":100.888888})
+            sell_thread = threading.Thread(target=add_entrustment.addSellEntrustmentLimited, kwargs={"symbol":'BTC', "market":'NZ', "price":price, "volume":1.888888})
+            sell_thread.setDaemon(True)
             sell_thread.start()
-        
+        sell_thread.join()
+
         for price in buy_list:
-            buy_thread = threading.Thread(target=add_entrustment.addBuyEntrustmentLimited, kwargs={"symbol":'MGXT', "market":'ETH', "price":price, "volume":100.888888})
+            buy_thread = threading.Thread(target=add_entrustment.addBuyEntrustmentLimited, kwargs={"symbol":'BTC', "market":'NZ', "price":price, "volume":1.888888})
+            buy_thread.setDaemon(True)
             buy_thread.start()    
-    """
-    
+        buy_thread.join()
+
     """
     rlist = []
     for each_item in (getSellFiveGears(), getBuyFiveGears()): 
@@ -84,7 +87,8 @@ if __name__ == "__main__":
 
         # 获取买卖五档
         #frozen_NZ = 0
-    for gear in (getBuyFiveGears(symbol='BTC', market='NZ'), getSellFiveGears(symbol='MGXT', market='ETH')):
+    
+    for gear in (getBuyFiveGears(symbol='BTC', market='NZ'), getSellFiveGears(symbol='BTC', market='NZ')):
         for j in sorted([list(i.items()) for i in [each_item for each_item in gear]], key=lambda x: x[0][1], reverse=True):
             #frozen_NZ += float(j[0][1])*float(j[1][1])
             print('价格', ":", j[0][1], '<==>', '总量' , ":", j[1][1], '<==>', "总额", ':', float(j[0][1])*float(j[1][1]))
@@ -92,6 +96,8 @@ if __name__ == "__main__":
     #print('BTC冻结金额:', 0.88888888*50*5*2)
     #print('NZ冻结金额:', frozen_NZ)
     #print('NZ冻结金额:', sum(filter(lambda x:x*200, buy_list)))
+
+    
 
 
     
